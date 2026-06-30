@@ -188,3 +188,4 @@
 // arr1[5]=20;
 // console.log(arr1);
 
+//DOM
