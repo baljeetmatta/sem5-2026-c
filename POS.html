@@ -6,7 +6,7 @@
 
 <div>
      <input type="text" id="code"/>
-     <input type="text" id="price"/>
+     <input type="text" id="price" disabled/>
      <input type="number" id="qty"/>
     
      <button id="addBtn">+</button>
@@ -19,11 +19,14 @@
             <th>Price</th>
             <th>Qty</th>
             <th>Total Price</th>
+            <th></th>
         </tr>
 
      </table>   
      </div>
-
+<div>
+    Order Total:<span id="total"></span>
+</div>
      <script src="./js/pos.js"></script>
     </body>
 </html>
