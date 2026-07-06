@@ -1,0 +1,46 @@
+/* #container
+{
+    display: flex;
+
+}
+#left-Panel{
+    flex:3
+
+}
+#right-Panel{
+flex:1;
+    border:1px solid;
+    box-shadow: 0px 2px 2px;
+}
+#right-Panel h2{
+    background-color: green;
+    color:white;
+    padding:8px;
+}
+.summary-row{
+    padding:8px;
+    border-bottom:1px solid lightgray
+}
+#invoiceBtn{
+    background-color:blue;
+    color:white;
+    width:100%;
+    margin-top:5px;
+    padding:5px;
+}
+input
+{
+    border-radius: 5px;
+    padding:5px;
+}
+input:disabled{
+    width:50px;
+}
+.delButton{
+    background-color:red;
+    border:none;
+    color:white;
+    padding:5px;
+    border-radius:5px;
+} */
+

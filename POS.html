@@ -1,17 +1,20 @@
 <html>
-    <body>
-        1. UI Design<br/>
-        2.  unique ID<br/>
-        3. Javascript-> references obtain
+    <head>
+        <link rel="stylesheet" href="./css/style.css"/>
 
-<div>
+    </head>
+    <body>
+      
+<div id="container">
+    <div id="left-Panel">
      <input type="text" id="code"/>
      <input type="text" id="price" disabled/>
      <input type="number" id="qty"/>
     
      <button id="addBtn">+</button>
     
-     </div>
+    
+    
     <div>
      <table id="items">
         <tr>
@@ -24,8 +27,31 @@
 
      </table>   
      </div>
-<div>
+     </div>
+
+<div id="right-Panel">
+    <h2>Bill Summary</h2>
+    <div class="summary-row">
     Order Total:<span id="total"></span>
+    </div>
+    <div class="summary-row">
+    GST
+    </div>
+    <div>
+         <button id="invoiceBtn">Inv</button>
+    </div>
+</div>
+</div>
+
+
+<div>
+    <table id="invoices">
+        <tr>
+            <th>Invoice</th>
+            <th>Dated</th>
+            <th>Total</th>
+        </tr>
+    </table>
 </div>
      <script src="./js/pos.js"></script>
     </body>

@@ -5,8 +5,11 @@ const qty = document.querySelector("#qty");
 const addBtn = document.querySelector("#addBtn");
 const items = document.querySelector("#items");
 const total = document.querySelector("#total");
+const invoiceBtn = document.querySelector("#invoiceBtn");
 let order = [];
+let invoices=[];
 let itemno = 1;
+let invoiceNumber=1;
 let currentCode = -1;
 // localStorage.setItem("temp",10);
 // let data=Number(localStorage.getItem("temp"));
@@ -71,6 +74,32 @@ addBtn.addEventListener("click", () => {
     productAdd();
 
 })
+
+invoiceBtn.addEventListener("click",()=>{
+//1. Invoice Generate(Object), Array
+//2. LocalStorage, Retrieve
+//3. order=[]
+//4. UI order items
+
+let invoice={
+    invoiceNumber,
+    date:new Date(),
+    items:order,
+    total:total.innerText
+}
+invoices.push(invoice)
+localStorage.setItem("invoices",JSON.stringify(invoices));
+order=[];
+setLocalStorage();
+window.location.reload();
+
+
+
+
+
+
+});
+
 
 function productAdd() {
 
@@ -141,6 +170,7 @@ function addProduct(product) {
 
     const operations = document.createElement("td");
     const delButton = document.createElement("button");
+    delButton.classList.add("delButton")
     delButton.innerHTML = "X";
     delButton.addEventListener("click",()=>{
         //1. UI
@@ -234,6 +264,9 @@ function getLocalStorage()
 
     })
     calculateTotal()
+    if(localStorage.getItem("invoices"))
+        invoices=JSON.parse(localStorage.getItem("invoices"));
+
 
 
 }
@@ -247,3 +280,6 @@ function calculateTotal()
 
 }
 getLocalStorage();
+
+//1. INVOICE GENERATE
+//2. DESIGN
