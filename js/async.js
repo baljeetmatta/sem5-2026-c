@@ -22,3 +22,62 @@ function increment()
     
 
 }
+//Promise
+//Pending, Fulfilled, rejected
+let number=16;
+const evenNumberPromise=new Promise(function(resolve,reject){
+
+    setTimeout(()=>{
+    if(number%2==0)
+        resolve({number,msg:'even'});
+    else
+        reject(number);
+},1000);
+    
+});
+// console.log(evenNumberPromise);
+evenNumberPromise.then((data)=>{
+    console.log("number is even",data)
+}).catch(()=>{
+    console.log("number is not even");
+
+})
+// const testPromise=new Promise(function(resolve,reject){
+
+//     reject();
+
+// });
+
+// // Promise([evenNumberPromise,testPromise]).then(()=>{
+// // console.log("Promise Resolved");
+// // }).catch(()=>{
+// //     console.log("Promise Rejected");
+
+// // })
+
+// const promiseOne=new Promise(function(resolve,reject){
+
+//     setTimeout(()=>{
+//         console.log("one")
+//         resolve();
+
+//     },500);
+// })
+// const promiseTwo=new Promise(function(resolve,reject){
+
+//     setTimeout(()=>{
+//         console.log("two")
+//         reject();
+        
+//     },300);
+// })
+
+// Promise.race([promiseOne,promiseTwo]).then(()=>{
+
+//     console.log('Resolved');
+
+// }).catch(()=>{
+//     console.log("Rejected");
+// });
+
+
