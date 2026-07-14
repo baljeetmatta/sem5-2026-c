@@ -1,13 +1,21 @@
 
 //AJAX
 
-fetch("./products.json",{
+// fetch("https://jsonplaceholder.typicode.com/posts",{
+//     method:"POST",
+//     headers:{
+//         "content-Type":"application/json"
+//     },
+//     body:JSON.stringify()
+// }) 
+fetch("https://jsonplaceholder.typicode.com/posts",{
     method:"POST",
     headers:{
         "content-Type":"application/json"
+       
     },
     body:JSON.stringify()
-})
+})              
 .then((response)=>{
 
     //console.log(response);
